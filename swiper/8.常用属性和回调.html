@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../plugins/swiper.css">
+    <style>
+        .swiper-container {
+            width: 600px;
+            height: 300px;
+        }
+        .swiper-slide {
+            font-size: 24px;
+        }
+        .swiper-slide:nth-of-type(1){
+            background: cornflowerblue;
+        }
+        .swiper-slide:nth-of-type(2){
+            background: coral;
+        }
+        .swiper-slide:nth-of-type(3) {
+            background: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+        </div>
+    </div>
+    <button id="btn">点击</button>
+
+    <script src="../plugins/swiper.js"></script>
+    <script>
+        var mySwiper = new Swiper ('.swiper-container', {
+            direction: 'horizontal',
+
+            speedn: 2000,
+
+            onSlideChangeStart: function () {
+                console.log("开始滑动")
+            },
+            onSlideChangeEnd: function () {
+                console.log("滑动结束")
+            }
+        });
+//        console.log(mySwiper);
+//        console.log(mySwiper.width);
+//        console.log(mySwiper.height);
+
+        btn.onclick = function () {
+//            console.log(mySwiper.translate);
+//            console.log(mySwiper.activeIndex);
+
+            //console.log(mySwiper.previousIndex); //操作过程的上一下
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            margin-bottom:10px;
+            width:50px;
+            height: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script src="../plugins/TweenMax.min.js"></script>
+    <script>
+        window.onload = function () {
+            var t = new TimelineMax();
+
+            t.staggerTo("div", 2, {
+                x: 400,
+                onComplete: function () {
+                    //console.log(this.target)
+                    this.target.style.backgroundColor = 'green'
+                }
+            }, 0.5)
+        };
+    </script>
+</body>
+</html>

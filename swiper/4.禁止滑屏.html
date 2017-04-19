@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../plugins/swiper.css">
+    <style>
+        .swiper-container {
+            width: 600px;
+            height: 300px;
+        }
+        .swiper-slide {
+            font-size: 24px;
+        }
+        .swiper-slide:nth-of-type(1){
+            background: cornflowerblue;
+        }
+        .swiper-slide:nth-of-type(2){
+            background: coral;
+        }
+        .swiper-slide:nth-of-type(3) {
+            background: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide stop">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+        </div>
+    </div>
+    <button class="prev">prev</button>
+    <button class="next">next</button>
+
+    <script src="../plugins/swiper.js"></script>
+    <script>
+        var mySwiper = new Swiper ('.swiper-container', {
+            direction: 'horizontal',
+
+            //禁止切换--> 结合 className: swiper-no-swiping
+            //noSwiping: true,
+            //noSwipingClass: 'stop'
+
+            nextButton: '.next',
+            prevButton: '.prev'
+        })
+    </script>
+</body>
+</html>

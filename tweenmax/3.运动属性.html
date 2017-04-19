@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            position: absolute;
+            top: 0;
+            left:0;
+            width :100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+
+
+    <script src="../plugins/TweenMax.min.js"></script>
+    <script>
+        window.onload = function () {
+            var t = new TimelineMax();
+
+            t.to('#box', 2, {
+//                width: 300,
+//                height: 300,
+                //autoAlpha: 0
+
+                /* 建议用x, y，不会重新渲染页面 */
+//                x: 400,
+//                y: 400
+
+//                scale: 0.5,
+//                scaleX: 0.5,
+//                scaleY: 0.5
+
+//                  rotation: 45
+//                  rotationX: 45,
+//                  rotationY: 45,
+//                  rotationZ: 45
+
+//                skewX: 60,
+//                skewY: 60
+
+            })
+
+        };
+    </script>
+</body>
+</html>

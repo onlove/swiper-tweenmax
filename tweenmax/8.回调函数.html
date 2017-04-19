@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+           position: absolute;
+           top:0;
+           left:0
+        }
+        #box{
+            width:100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+
+    <script src="../plugins/TweenMax.min.js"></script>
+    <script>
+        window.onload = function () {
+            var t = new TimelineMax();
+
+            t.to("#box", 2, {
+                x: 400,
+                onStart: function () {
+                    console.log("onStart")
+                },
+                onUpdate: function () {
+                    console.log("onUpdate")
+                },
+                onComplete: function () {
+                    console.log("onComplete")
+                }
+            })
+        };
+    </script>
+</body>
+</html>

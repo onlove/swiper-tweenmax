@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            margin-bottom:10px;
+            width :50px;
+            height: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <script src="../plugins/TweenMax.min.js"></script>
+    <script>
+        window.onload = function () {
+            var t = new TimelineMax();
+
+//            t.staggerTo('div', 1, {
+//                x: 400
+//            })
+
+//            t.staggerFrom('div', 1, {
+//                x: 400
+//            })
+
+//            t.staggerTo('div', 1, {
+//                x: 400,
+//            }, 0.5)
+
+
+            t.staggerTo('div', 1, {
+                cycle: {
+//                    x: [100, 200, 300]
+                    x: function (i) {
+//                        return 200
+//                        return i * 20
+
+                        if(i < 5) {
+                            return 500
+                        }else {
+                            return 200
+                        }
+                    }
+                }
+            }, 0.5)
+
+        };
+    </script>
+</body>
+</html>
